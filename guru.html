@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guru & Staff – UPTD SDN Pamulang Permai</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8','primary-dark': '#1E3A8A','primary-mid': '#2563EB',
+            'primary-light': '#3B82F6','primary-pale': '#DBEAFE',
+            accent: '#EFF6FF', surface: '#F8FAFC'
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+<!-- Page Hero -->
+<div class="page-hero text-white text-center">
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-semibold mb-3">Tenaga Pendidik</span>
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-2">Guru & Staff</h1>
+    <p class="text-blue-100 text-base mb-2">Kenali tenaga pendidik dan staf UPTD SDN Pamulang Permai</p>
+  </div>
+</div>
+
+<!-- Content -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Search -->
+    <div class="max-w-md mx-auto mb-10 anim-fade-up">
+      <div class="relative">
+        <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+        <input type="text" id="searchGuru" placeholder="Cari nama guru atau jabatan..." class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-light text-sm">
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 anim-fade-up" id="guruGrid"></div>
+    <p id="guruEmpty" class="text-center text-gray-400 mt-8 hidden">Tidak ditemukan guru/staff dengan nama tersebut.</p>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>
+const guruData = [
+  { nama: 'Drs. Ahmad Sudirman, M.Pd.', jabatan: 'Kepala Sekolah', mapel: '-' },
+  { nama: 'Siti Rahayu, S.Pd.', jabatan: 'Wakil Kepala Sekolah', mapel: 'Bahasa Indonesia' },
+  { nama: 'Hendra Kusuma, S.Pd.', jabatan: 'Tata Usaha / Sekretaris', mapel: '-' },
+  { nama: 'Dewi Anggraini, S.E.', jabatan: 'Bendahara', mapel: '-' },
+  { nama: 'Rudi Hartono, S.Pd.', jabatan: 'Koordinator Kurikulum', mapel: 'Matematika' },
+  { nama: 'Lia Permatasari, S.Pd.', jabatan: 'Koordinator Kesiswaan', mapel: 'IPA' },
+  { nama: 'Budi Santoso', jabatan: 'Koordinator Sarana', mapel: '-' },
+  { nama: 'Yuni Astuti, S.Pd.', jabatan: 'Koordinator Humas', mapel: 'PPKn' },
+  { nama: 'Agus Prasetyo, S.Pd.', jabatan: 'Guru Kelas 1A', mapel: 'Tematik' },
+  { nama: 'Nuraini Wahyudi, S.Pd.', jabatan: 'Guru Kelas 1B', mapel: 'Tematik' },
+  { nama: 'Farida Hanum, S.Pd.', jabatan: 'Guru Kelas 2A', mapel: 'Tematik' },
+  { nama: 'Tri Wahyono, S.Pd.', jabatan: 'Guru Kelas 2B', mapel: 'Tematik' },
+  { nama: 'Eko Priyanto, S.Pd.', jabatan: 'Guru Kelas 3A', mapel: 'Tematik' },
+  { nama: 'Sumiati, S.Pd.', jabatan: 'Guru Kelas 3B', mapel: 'Tematik' },
+  { nama: 'Hendri Kurniawan, S.Pd.', jabatan: 'Guru Kelas 4A', mapel: 'Tematik' },
+  { nama: 'Rohimah, S.Pd.', jabatan: 'Guru Kelas 4B', mapel: 'Tematik' },
+  { nama: 'Dian Pratiwi, S.Pd.', jabatan: 'Guru Kelas 5A', mapel: 'Tematik' },
+  { nama: 'Wahyu Hidayat, S.Pd.', jabatan: 'Guru Kelas 5B', mapel: 'Tematik' },
+  { nama: 'Intan Permata, S.Pd.', jabatan: 'Guru Kelas 6A', mapel: 'Tematik' },
+  { nama: 'Mulyono, S.Pd.', jabatan: 'Guru Kelas 6B', mapel: 'Tematik' },
+  { nama: 'Anas Fauzi, S.Pd.I.', jabatan: 'Guru Pendidikan Agama Islam', mapel: 'PAI' },
+  { nama: 'Clara Monica, S.Pd.', jabatan: 'Guru PJOK', mapel: 'PJOK' },
+  { nama: 'Bambang Setiawan', jabatan: 'Petugas Perpustakaan', mapel: '-' },
+  { nama: 'Sulastri', jabatan: 'Petugas Kebersihan', mapel: '-' },
+];
+
+function renderGuru(filter = '') {
+  const grid = document.getElementById('guruGrid');
+  const empty = document.getElementById('guruEmpty');
+  const q = filter.toLowerCase();
+  const filtered = guruData.filter(g => g.nama.toLowerCase().includes(q) || g.jabatan.toLowerCase().includes(q));
+  grid.innerHTML = filtered.map(g => `
+    <div class="card-hover bg-white border border-gray-100 rounded-2xl p-5 shadow-sm flex items-start gap-4">
+      <div class="w-11 h-11 bg-primary-pale rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-primary font-bold text-sm">${g.nama.charAt(0)}</span>
+      </div>
+      <div>
+        <p class="font-semibold text-gray-800 text-sm">${g.nama}</p>
+        <p class="text-xs text-primary font-medium mt-0.5">${g.jabatan}</p>
+        ${g.mapel !== '-' ? `<p class="text-xs text-gray-400 mt-0.5">Mapel: ${g.mapel}</p>` : ''}
+      </div>
+    </div>
+  `).join('');
+  empty.classList.toggle('hidden', filtered.length > 0);
+}
+renderGuru();
+document.getElementById('searchGuru').addEventListener('input', e => renderGuru(e.target.value));
+</script>
+</body>
+</html>

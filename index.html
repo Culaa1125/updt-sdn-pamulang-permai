@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda – UPTD SDN Pamulang Permai</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8','primary-dark': '#1E3A8A','primary-mid': '#2563EB',
+            'primary-light': '#3B82F6','primary-pale': '#DBEAFE',
+            accent: '#EFF6FF', surface: '#F8FAFC'
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+<!-- ============ HERO ============ -->
+<section class="hero-bg text-white pt-36 pb-28 px-4 relative bg-[url('/img/background.png')] bg-cover">
+  <div class="absolute inset-0 bg-primary/30 backdrop-blur-sm"></div>
+  <div class="max-w-5xl mx-auto text-center relative z-10">
+    <div class="anim-scale">
+      <div class="w-24 h-24 bg-white/20 backdrop-blur rounded-full mx-auto mb-6 flex items-center justify-center">
+        <img src="/img/logo.png" alt="Logo" class="w-full h-full object-contain">
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold mb-4 anim-fade-up delay-1">UPTD SDN Pamulang Permai</h1>
+    <p class="text-xl md:text-2xl font-light opacity-90 mb-8 anim-fade-up delay-2">Mencetak Generasi Cerdas, Berkarakter dan Berprestasi</p>
+    <div class="flex flex-wrap justify-center gap-4 anim-fade-up delay-3">
+      <a href="prestasi.html" class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition">Lihat Prestasi</a>
+      <a href="kontak.html" class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">Hubungi Kami</a>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 60h1440V30C1200 60 960 0 720 30S240 60 0 30v30z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<section class="bg-white py-8 px-4 border-b border-gray-100">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+    <div class="anim-fade-up delay-1">
+      <p class="text-4xl font-extrabold text-primary">600+</p>
+      <p class="text-sm text-gray-500 mt-1">Siswa Aktif</p>
+    </div>
+    <div class="anim-fade-up delay-2">
+      <p class="text-4xl font-extrabold text-primary">24</p>
+      <p class="text-sm text-gray-500 mt-1">Tenaga Pendidik</p>
+    </div>
+    <div class="anim-fade-up delay-3">
+      <p class="text-4xl font-extrabold text-primary">20+</p>
+      <p class="text-sm text-gray-500 mt-1">Tahun Berdiri</p>
+    </div>
+    <div class="anim-fade-up delay-4">
+      <p class="text-4xl font-extrabold text-primary">50+</p>
+      <p class="text-sm text-gray-500 mt-1">Prestasi</p>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang Sekolah -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-12 anim-fade-up">
+      <span class="px-4 py-1 bg-primary-pale text-primary text-sm font-semibold rounded-full">Profil Sekolah</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-3">Tentang Sekolah</h2>
+      <div class="w-16 h-1 bg-primary-light mx-auto rounded-full"></div>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="card-hover bg-accent p-8 rounded-2xl anim-fade-left">
+        <h3 class="text-xl font-bold text-primary mb-3">Sejarah Singkat</h3>
+        <p class="text-gray-600 leading-relaxed">UPTD SDN Pamulang Permai didirikan sebagai institusi pendidikan dasar unggulan di kawasan Pamulang, Tangerang Selatan. Dengan pengalaman lebih dari dua dekade, sekolah ini terus berkomitmen memberikan pendidikan berkualitas bagi generasi muda Indonesia.</p>
+      </div>
+      <div class="space-y-6 anim-fade-right">
+        <div class="card-hover bg-accent p-4 rounded-2xl">
+          <h3 class="text-lg font-bold text-primary mb-2">Visi</h3>
+          <p class="text-gray-600 text-sm">Mewujudkan peserta didik yang beriman, berkarakter, berprestasi, dan berwawasan lingkungan.</p>
+        </div>
+        <div class="card-hover bg-accent p-4 rounded-2xl">
+          <h3 class="text-lg font-bold text-primary mb-2">Misi</h3>
+          <ul class="text-gray-600 text-sm space-y-1">
+            <li>• Meningkatkan kualitas pembelajaran.</li>
+            <li>• Mengembangkan potensi akademik dan non-akademik siswa.</li>
+            <li>• Menanamkan nilai karakter dan kedisiplinan.</li>
+            <li>• Menciptakan lingkungan sekolah yang sehat dan nyaman.</li>
+            <li>• Mengoptimalkan penggunaan teknologi dalam pendidikan.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sambutan -->
+    <div class="mt-12 bg-accent rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 anim-fade-up">
+      <div class="w-32 h-32 bg-gradient-to-br from-primary to-primary-light rounded-full flex-shrink-0 flex items-center justify-center">
+        <i data-lucide="user" class="w-16 h-16 text-white/80"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-primary mb-3">Sambutan Kepala Sekolah</h3>
+        <p class="text-gray-600 italic leading-relaxed mb-4">"Selamat datang di UPTD SDN Pamulang Permai. Website ini hadir sebagai sarana informasi dan komunikasi antara sekolah, peserta didik, orang tua, dan masyarakat. Kami berharap website ini dapat memberikan informasi yang akurat mengenai kegiatan, prestasi, dan perkembangan sekolah. Bersama kita wujudkan generasi emas Indonesia."</p>
+        <p class="font-bold text-primary">Drs. Ahmad Sudirman, M.Pd.</p>
+        <p class="text-sm text-gray-500">Kepala Sekolah UPTD SDN Pamulang Permai</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Links ke Halaman Lain -->
+<section class="py-16 px-4 bg-surface">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10 anim-fade-up">
+      <h2 class="text-2xl font-bold text-primary">Jelajahi Lebih Lanjut</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="struktur.html" class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 anim-fade-up delay-1">
+        <div class="w-12 h-12 bg-primary-pale rounded-xl flex items-center justify-center flex-shrink-0">
+          <i data-lucide="square-chart-gantt" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-1">Struktur Organisasi</h3>
+          <p class="text-sm text-gray-500">Lihat susunan pengurus dan kepengurusan sekolah.</p>
+        </div>
+      </a>
+      <a href="guru.html" class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 anim-fade-up delay-2">
+        <div class="w-12 h-12 bg-primary-pale rounded-xl flex items-center justify-center flex-shrink-0">
+          <i data-lucide="users" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-1">Guru & Staff</h3>
+          <p class="text-sm text-gray-500">Kenali tenaga pendidik dan staf sekolah kami.</p>
+        </div>
+      </a>
+      <a href="akademik.html" class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 anim-fade-up delay-3">
+        <div class="w-12 h-12 bg-primary-pale rounded-xl flex items-center justify-center flex-shrink-0">
+          <i data-lucide="book-open" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-1">Akademik</h3>
+          <p class="text-sm text-gray-500">Program pembelajaran dan kalender akademik.</p>
+        </div>
+      </a>
+      <a href="prestasi.html" class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 anim-fade-up delay-1">
+        <div class="w-12 h-12 bg-primary-pale rounded-xl flex items-center justify-center flex-shrink-0">
+          <i data-lucide="trophy" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-1">Prestasi</h3>
+          <p class="text-sm text-gray-500">Capaian dan penghargaan akademik maupun non-akademik.</p>
+        </div>
+      </a>
+      <a href="ppdb.html" class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 anim-fade-up delay-2">
+        <div class="w-12 h-12 bg-primary-pale rounded-xl flex items-center justify-center flex-shrink-0">
+          <i data-lucide="clipboard-list" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-1">PPDB 2026/2027</h3>
+          <p class="text-sm text-gray-500">Informasi pendaftaran peserta didik baru.</p>
+        </div>
+      </a>
+      <a href="kontak.html" class="card-hover bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-start gap-4 anim-fade-up delay-3">
+        <div class="w-12 h-12 bg-primary-pale rounded-xl flex items-center justify-center flex-shrink-0">
+          <i data-lucide="mail" class="w-6 h-6 text-primary"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-gray-800 mb-1">Kontak</h3>
+          <p class="text-sm text-gray-500">Hubungi kami untuk informasi lebih lanjut.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Galeri Preview -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12 anim-fade-up">
+      <span class="px-4 py-1 bg-primary-pale text-primary text-sm font-semibold rounded-full">Dokumentasi Kegiatan</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-primary mt-3 mb-3">Galeri Sekolah</h2>
+      <div class="w-16 h-1 bg-primary-light mx-auto rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="anim-fade-up delay-1 overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-primary to-primary-mid h-64 flex items-center justify-center cursor-default">
+        <div class="text-white text-center"><i data-lucide="flag" class="w-16 h-16 mx-auto mb-2 opacity-60"></i><p class="font-semibold">Upacara Bendera</p></div>
+      </div>
+      <div class="anim-fade-up delay-2 overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-amber-400 to-orange-500 h-64 flex items-center justify-center cursor-default">
+        <div class="text-white text-center"><i data-lucide="tent" class="w-16 h-16 mx-auto mb-2 opacity-60"></i><p class="font-semibold">Kegiatan Pramuka</p></div>
+      </div>
+      <div class="anim-fade-up delay-3 overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-green-400 to-emerald-500 h-64 flex items-center justify-center cursor-default">
+        <div class="text-white text-center"><i data-lucide="leaf" class="w-16 h-16 mx-auto mb-2 opacity-60"></i><p class="font-semibold">Program P5</p></div>
+      </div>
+      <div class="anim-fade-up delay-1 overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-purple-400 to-violet-500 h-64 flex items-center justify-center cursor-default">
+        <div class="text-white text-center"><i data-lucide="music" class="w-16 h-16 mx-auto mb-2 opacity-60"></i><p class="font-semibold">Pentas Seni</p></div>
+      </div>
+      <div class="anim-fade-up delay-2 overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-cyan-400 to-blue-500 h-64 flex items-center justify-center cursor-default">
+        <div class="text-white text-center"><i data-lucide="users" class="w-16 h-16 mx-auto mb-2 opacity-60"></i><p class="font-semibold">Foto Bersama Guru</p></div>
+      </div>
+      <div class="anim-fade-up delay-3 overflow-hidden rounded-2xl shadow-md bg-gradient-to-br from-rose-400 to-pink-500 h-64 flex items-center justify-center cursor-default">
+        <div class="text-white text-center"><i data-lucide="trophy" class="w-16 h-16 mx-auto mb-2 opacity-60"></i><p class="font-semibold">Piala Prestasi</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>

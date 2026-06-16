@@ -1,0 +1,117 @@
+/* ============ SHARED STYLES ============ */
+html { scroll-behavior: smooth; }
+body { overflow-x: hidden; font-family: 'Plus Jakarta Sans', sans-serif; }
+
+/* Hero */
+.hero-bg {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 45%, #3B82F6 100%);
+  position: relative;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Cards */
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(29,78,216,0.15); }
+
+/* Nav link underline */
+.nav-link { position: relative; }
+.nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #3B82F6; transition: width 0.3s; }
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+.nav-link.active { color: #1D4ED8 !important; font-weight: 700; }
+
+/* ===== SCROLL ANIMATIONS ===== */
+/* Fade up (default) */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.anim-fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* Fade in from left */
+.anim-fade-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.anim-fade-left.visible { opacity: 1; transform: translateX(0); }
+
+/* Fade in from right */
+.anim-fade-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1);
+}
+.anim-fade-right.visible { opacity: 1; transform: translateX(0); }
+
+/* Scale in */
+.anim-scale {
+  opacity: 0;
+  transform: scale(0.88);
+  transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1);
+}
+.anim-scale.visible { opacity: 1; transform: scale(1); }
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* Toast */
+.toast { position: fixed; bottom: 24px; right: 24px; z-index: 9999; transform: translateY(100px); opacity: 0; transition: all 0.4s ease; }
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* Back to top */
+#backToTop { position: fixed; bottom: 80px; right: 20px; z-index: 998; display: none; }
+
+/* Mobile nav */
+#mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+#mobileMenu.open { max-height: 600px; }
+
+/* Tab active */
+.tab-btn.active { background: #1D4ED8; color: #fff; }
+.tab-btn { transition: all 0.2s; }
+
+/* Org card */
+.org-card { border-top: 4px solid #1D4ED8; }
+
+/* Calendar grid */
+.cal-day { min-height: 56px; }
+.cal-day.today { background: #DBEAFE; font-weight: 700; }
+.cal-day.event { position: relative; }
+.cal-dot { width: 6px; height: 6px; border-radius: 9999px; background: #1D4ED8; margin: 0 auto; }
+
+/* Gallery hover */
+.gallery-item img { transition: transform 0.5s ease; }
+.gallery-item:hover img { transform: scale(1.07); }
+
+/* Page hero mini (untuk sub-pages) */
+.page-hero {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1D4ED8 60%, #3B82F6 100%);
+  position: relative;
+  padding: 7rem 1rem 3rem;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0; height: 48px;
+  background: white;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

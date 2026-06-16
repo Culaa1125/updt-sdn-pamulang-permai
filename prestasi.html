@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prestasi – UPTD SDN Pamulang Permai</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8','primary-dark': '#1E3A8A','primary-mid': '#2563EB',
+            'primary-light': '#3B82F6','primary-pale': '#DBEAFE',
+            accent: '#EFF6FF', surface: '#F8FAFC'
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .tab-btn.active { background: #1D4ED8; color: #fff; border-color: #1D4ED8; }
+    .tab-btn { transition: all 0.2s; }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+<!-- Page Hero -->
+<div class="page-hero text-white text-center">
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <span class="inline-block px-4 py-1 bg-white/20 rounded-full text-sm font-semibold mb-3">Kebanggaan Sekolah</span>
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-2">Prestasi Sekolah</h1>
+    <p class="text-blue-100 text-base mb-2">Capaian dan penghargaan akademik maupun non-akademik</p>
+  </div>
+</div>
+
+<!-- Content -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Summary cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="bg-gradient-to-br from-yellow-50 to-amber-50 border border-amber-200 rounded-2xl p-5 text-center anim-scale delay-1">
+        <div class="text-3xl mb-1">🥇</div>
+        <p class="text-2xl font-extrabold text-amber-600">8</p>
+        <p class="text-xs text-gray-600 mt-1">Juara 1</p>
+      </div>
+      <div class="bg-gradient-to-br from-gray-50 to-slate-100 border border-gray-200 rounded-2xl p-5 text-center anim-scale delay-2">
+        <div class="text-3xl mb-1">🥈</div>
+        <p class="text-2xl font-extrabold text-slate-600">4</p>
+        <p class="text-xs text-gray-600 mt-1">Juara 2</p>
+      </div>
+      <div class="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-2xl p-5 text-center anim-scale delay-3">
+        <div class="text-3xl mb-1">🥉</div>
+        <p class="text-2xl font-extrabold text-orange-600">2</p>
+        <p class="text-xs text-gray-600 mt-1">Juara 3</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-5 text-center anim-scale delay-4">
+        <div class="text-3xl mb-1">⭐</div>
+        <p class="text-2xl font-extrabold text-blue-600">2</p>
+        <p class="text-xs text-gray-600 mt-1">Penghargaan</p>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-8 anim-fade-up">
+      <button class="tab-btn active px-5 py-2.5 rounded-full text-sm justify-items-center font-semibold border border-primary" data-tab="akademik"><i data-lucide="book-open" class="w-4 h-4"></i> Akademik</button>
+      <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold justify-items-center border border-primary text-primary bg-white" data-tab="nonakademik"><i data-lucide="medal" class="w-4 h-4"></i> Non-Akademik</button>
+    </div>
+
+    <!-- Search -->
+    <div class="max-w-sm mb-6 anim-fade-up">
+      <div class="relative">
+        <i data-lucide="search" class="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+        <input type="text" id="searchPrestasi" placeholder="Cari prestasi..." class="w-full pl-9 pr-4 py-2.5 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-light text-sm">
+      </div>
+    </div>
+
+    <!-- Table Akademik -->
+    <div id="tab-akademik" class="anim-fade-up overflow-x-auto bg-white rounded-2xl shadow-sm border border-gray-100">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="bg-primary-pale text-primary">
+            <th class="p-3 text-sm font-semibold rounded-tl-2xl">Tahun</th>
+            <th class="p-3 text-sm font-semibold">Prestasi</th>
+            <th class="p-3 text-sm font-semibold">Tingkat</th>
+            <th class="p-3 text-sm font-semibold rounded-tr-2xl">Juara</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyAkademik"></tbody>
+      </table>
+      <p id="emptyAkademik" class="text-center text-gray-400 py-8 hidden">Tidak ada data prestasi ditemukan.</p>
+    </div>
+
+    <!-- Table Non-Akademik -->
+    <div id="tab-nonakademik" class="hidden anim-fade-up overflow-x-auto bg-white rounded-2xl shadow-sm border border-gray-100">
+      <table class="w-full text-left">
+        <thead>
+          <tr class="bg-primary-pale text-primary">
+            <th class="p-3 text-sm font-semibold rounded-tl-2xl">Tahun</th>
+            <th class="p-3 text-sm font-semibold">Prestasi</th>
+            <th class="p-3 text-sm font-semibold">Tingkat</th>
+            <th class="p-3 text-sm font-semibold rounded-tr-2xl">Juara</th>
+          </tr>
+        </thead>
+        <tbody id="tbodyNonAkademik"></tbody>
+      </table>
+      <p id="emptyNonAkademik" class="text-center text-gray-400 py-8 hidden">Tidak ada data prestasi ditemukan.</p>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>
+const prestasiData = {
+  akademik: [
+    { tahun: '2025', prestasi: 'Juara 1 Olimpiade Matematika', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+    { tahun: '2025', prestasi: 'Juara 2 Olimpiade IPA', tingkat: 'Kota', juara: '🥈 Juara 2' },
+    { tahun: '2024', prestasi: 'Juara 1 Lomba Cerdas Cermat', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+    { tahun: '2024', prestasi: 'Juara 3 Lomba Bahasa Indonesia', tingkat: 'Kota', juara: '🥉 Juara 3' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Matematika Tingkat SD', tingkat: 'Provinsi', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Peserta Terbaik OSN SD', tingkat: 'Nasional', juara: '⭐ Peserta Terbaik' },
+  ],
+  nonakademik: [
+    { tahun: '2025', prestasi: 'Juara 2 Lomba Pramuka', tingkat: 'Kota', juara: '🥈 Juara 2' },
+    { tahun: '2025', prestasi: 'Juara 1 Lomba Voli Mini', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+    { tahun: '2024', prestasi: 'Juara 1 Lomba Kebersihan Sekolah', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+    { tahun: '2024', prestasi: 'Juara Harapan 1 FLS2N Seni Tari', tingkat: 'Kecamatan', juara: '🏅 Harapan 1' },
+    { tahun: '2024', prestasi: 'Juara 2 Lomba Lukis Tingkat SD', tingkat: 'Kota', juara: '🥈 Juara 2' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Paskibra', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+  ]
+};
+
+let activeTab = 'akademik';
+
+function renderPrestasi(filter = '') {
+  const q = filter.toLowerCase();
+  ['akademik', 'nonakademik'].forEach(tab => {
+    const data = prestasiData[tab].filter(p =>
+      p.prestasi.toLowerCase().includes(q) || p.tingkat.toLowerCase().includes(q) || p.tahun.includes(q)
+    );
+    const tbodyId = tab === 'akademik' ? 'tbodyAkademik' : 'tbodyNonAkademik';
+    const emptyId = tab === 'akademik' ? 'emptyAkademik' : 'emptyNonAkademik';
+    document.getElementById(tbodyId).innerHTML = data.map((p, i) => `
+      <tr class="${i % 2 === 0 ? 'bg-white' : 'bg-blue-50/30'} border-b border-gray-100 hover:bg-primary-pale transition">
+        <td class="p-3 text-sm font-medium text-gray-700">${p.tahun}</td>
+        <td class="p-3 text-sm text-gray-800">${p.prestasi}</td>
+        <td class="p-3 text-sm text-gray-600">${p.tingkat}</td>
+        <td class="p-3 text-sm font-semibold">${p.juara}</td>
+      </tr>
+    `).join('');
+    document.getElementById(emptyId).classList.toggle('hidden', data.length > 0);
+  });
+}
+renderPrestasi();
+document.getElementById('searchPrestasi').addEventListener('input', e => renderPrestasi(e.target.value));
+
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    activeTab = this.dataset.tab;
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+      b.classList.add('text-primary', 'bg-white');
+    });
+    this.classList.add('active');
+    this.classList.remove('text-primary', 'bg-white');
+    document.getElementById('tab-akademik').classList.toggle('hidden', activeTab !== 'akademik');
+    document.getElementById('tab-nonakademik').classList.toggle('hidden', activeTab !== 'nonakademik');
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPDB – UPTD SDN Pamulang Permai</title>
+  <link rel="icon" href="/img/logo.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D4ED8','primary-dark': '#1E3A8A','primary-mid': '#2563EB',
+            'primary-light': '#3B82F6','primary-pale': '#DBEAFE',
+            accent: '#EFF6FF', surface: '#F8FAFC'
+          },
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+<!-- Page Hero -->
+<div class="page-hero text-white text-center">
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <span class="inline-block px-4 py-1.5 bg-white/20 rounded-full text-sm font-semibold mb-3">PPDB 2026/2027</span>
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-2">Penerimaan Peserta Didik Baru</h1>
+    <p class="text-blue-100 text-base mb-2">Mari bergabung bersama UPTD SDN Pamulang Permai menuju masa depan gemilang</p>
+  </div>
+</div>
+
+<!-- Content -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Gelombang Pendaftaran -->
+    <div class="mb-12 anim-fade-up">
+      <h3 class="text-xl font-bold text-primary mb-5 flex items-center gap-2">
+        <i data-lucide="calendar-days" class="w-5 h-5"></i> Jadwal Pendaftaran per Gelombang
+      </h3>
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div class="bg-gradient-to-br from-primary to-primary-mid text-white rounded-2xl p-6 shadow-md anim-fade-up delay-1">
+          <div class="text-xs font-bold uppercase tracking-wide opacity-80 mb-2">Gelombang 1</div>
+          <p class="font-bold text-lg">1 Feb – 28 Feb 2026</p>
+          <p class="text-sm opacity-80 mt-1">Kuota: 30 siswa</p>
+          <span class="mt-3 inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold">Sudah Dibuka</span>
+        </div>
+        <div class="bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-2xl p-6 shadow-md anim-fade-up delay-2">
+          <div class="text-xs font-bold uppercase tracking-wide opacity-80 mb-2">Gelombang 2</div>
+          <p class="font-bold text-lg">1 Mar – 31 Mar 2026</p>
+          <p class="text-sm opacity-80 mt-1">Kuota: 20 siswa</p>
+          <span class="mt-3 inline-block bg-white/20 px-3 py-1 rounded-full text-xs font-semibold">Segera Dibuka</span>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm anim-fade-up delay-3">
+          <div class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-2">Gelombang 3</div>
+          <p class="font-bold text-lg text-gray-800">1 Apr – 30 Apr 2026</p>
+          <p class="text-sm text-gray-500 mt-1">Kuota: 10 siswa (sisa)</p>
+          <span class="mt-3 inline-block bg-gray-100 text-gray-500 px-3 py-1 rounded-full text-xs font-semibold">Belum Dibuka</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Alur -->
+      <div class="lg:col-span-2 bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 anim-fade-left">
+        <h3 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+          <i data-lucide="clipboard-list" class="w-5 h-5 text-primary"></i> Alur Pendaftaran
+        </h3>
+        <div class="relative border-l-2 border-primary-light ml-4 space-y-8 pb-4">
+          <div class="relative pl-8">
+            <span class="absolute -left-3.5 bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">1</span>
+            <h4 class="text-lg font-semibold">Isi Formulir Online</h4>
+            <p class="text-gray-600 mt-1 text-sm">Orang tua/wali mengisi formulir pendaftaran melalui tombol "Daftar Sekarang" atau datang langsung ke sekolah.</p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute -left-3.5 bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">2</span>
+            <h4 class="text-lg font-semibold">Verifikasi Berkas</h4>
+            <p class="text-gray-600 mt-1 text-sm">Membawa dokumen persyaratan (asli & fotokopi) ke panitia PPDB di sekolah untuk divalidasi.</p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute -left-3.5 bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">3</span>
+            <h4 class="text-lg font-semibold">Pengumuman Kelulusan</h4>
+            <p class="text-gray-600 mt-1 text-sm">Hasil seleksi administrasi dan zonasi/usia diumumkan melalui website dan papan pengumuman sekolah.</p>
+          </div>
+          <div class="relative pl-8">
+            <span class="absolute -left-3.5 bg-primary text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm">4</span>
+            <h4 class="text-lg font-semibold">Daftar Ulang</h4>
+            <p class="text-gray-600 mt-1 text-sm">Calon siswa yang diterima wajib melakukan konfirmasi dan registrasi ulang sesuai jadwal.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Syarat & CTA -->
+      <div class="space-y-6 anim-fade-right">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-primary"></i> Persyaratan Umum
+          </h3>
+          <ul class="space-y-3 text-gray-600 text-sm">
+            <li class="flex items-start gap-2.5"><span class="text-primary mt-0.5">✓</span><span>Usia minimal 6 tahun per 1 Juli 2026.</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary mt-0.5">✓</span><span>Fotokopi Akta Kelahiran (2 lembar).</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary mt-0.5">✓</span><span>Fotokopi Kartu Keluarga / KK (2 lembar).</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary mt-0.5">✓</span><span>Fotokopi KTP Orang Tua / Wali (2 lembar).</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary mt-0.5">✓</span><span>Pas foto terbaru ukuran 3×4 (3 lembar).</span></li>
+            <li class="flex items-start gap-2.5"><span class="text-primary mt-0.5">✓</span><span>Surat keterangan domisili (jika berbeda KK).</span></li>
+          </ul>
+        </div>
+        <div class="bg-gradient-to-br from-primary-dark to-primary rounded-2xl p-6 text-white shadow-md">
+          <h3 class="text-lg font-bold mb-2">Pertanyaan seputar PPDB?</h3>
+          <p class="text-blue-100 text-sm mb-5">Hubungi sekretariat PPDB kami via WhatsApp untuk respon cepat.</p>
+          <div class="flex flex-col gap-3">
+            <a href="kontak.html" class="w-full bg-white text-primary hover:bg-blue-50 text-center font-bold py-3 px-4 rounded-xl transition text-sm">Mulai Daftar Online</a>
+            <a href="https://wa.me/6281234567890?text=Halo%20Panitia%20PPDB,%20saya%20ingin%20bertanya." target="_blank" rel="noopener" class="w-full bg-white/20 hover:bg-white/30 border border-white/30 text-center font-semibold py-3 px-4 rounded-xl transition text-sm flex items-center justify-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Hubungi Panitia (WA)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>
