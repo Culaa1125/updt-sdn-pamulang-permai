@@ -43,7 +43,7 @@ function injectNavbar() {
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0">
-          <img src="img/logo.png" alt="Logo" class="w-full h-full object-cover">
+          <img src="./img/logo.png" alt="Logo" class="w-full h-full object-cover">
         </div>
       </a>
 
@@ -96,7 +96,7 @@ function injectFooter() {
         <div>
           <div class="flex items-center gap-3 mb-3">
             <div class="w-9 h-9 bg-white/20 rounded-full flex items-center justify-center">
-              <img src="img/logo.png" alt="Logo">
+              <img src="./img/logo.png" alt="Logo">
             </div>
             <span class="font-bold">UPTD SDN Pamulang Permai</span>
           </div>
