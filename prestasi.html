@@ -118,21 +118,32 @@
 <script src="shared.js"></script>
 <script>
 const prestasiData = {
-  akademik: [
-    { tahun: '2025', prestasi: 'Juara 1 Olimpiade Matematika', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
-    { tahun: '2025', prestasi: 'Juara 2 Olimpiade IPA', tingkat: 'Kota', juara: '🥈 Juara 2' },
-    { tahun: '2024', prestasi: 'Juara 1 Lomba Cerdas Cermat', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
-    { tahun: '2024', prestasi: 'Juara 3 Lomba Bahasa Indonesia', tingkat: 'Kota', juara: '🥉 Juara 3' },
-    { tahun: '2023', prestasi: 'Juara 1 Lomba Matematika Tingkat SD', tingkat: 'Provinsi', juara: '🥇 Juara 1' },
-    { tahun: '2023', prestasi: 'Peserta Terbaik OSN SD', tingkat: 'Nasional', juara: '⭐ Peserta Terbaik' },
-  ],
+  akademik: [],
   nonakademik: [
-    { tahun: '2025', prestasi: 'Juara 2 Lomba Pramuka', tingkat: 'Kota', juara: '🥈 Juara 2' },
-    { tahun: '2025', prestasi: 'Juara 1 Lomba Voli Mini', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
-    { tahun: '2024', prestasi: 'Juara 1 Lomba Kebersihan Sekolah', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
-    { tahun: '2024', prestasi: 'Juara Harapan 1 FLS2N Seni Tari', tingkat: 'Kecamatan', juara: '🏅 Harapan 1' },
-    { tahun: '2024', prestasi: 'Juara 2 Lomba Lukis Tingkat SD', tingkat: 'Kota', juara: '🥈 Juara 2' },
-    { tahun: '2023', prestasi: 'Juara 1 Lomba Paskibra', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Juara 3 Lomba Pantomim', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2023', prestasi: 'Juara 3 Lomba Sekolah Bersih dan Sehat', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2023', prestasi: 'Juara 2 Lomba Panahan', tingkat: 'Kecamatan', juara: '🥈 Juara 2' },
+    { tahun: '2023', prestasi: 'Juara 3 Lomba Panahan', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Melukis', tingkat: 'Kota', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Melukis', tingkat: 'Kecamatan', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Pencak Silat', tingkat: 'Nasional', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Pencak Silat', tingkat: 'Kota', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Juara 3 Lomba Pencak Silat', tingkat: 'Nasional', juara: '🥉 Juara 3' },
+    { tahun: '2023', prestasi: 'Juara 1 Lomba Panahan', tingkat: 'Kota', juara: '🥇 Juara 1' },
+    { tahun: '2023', prestasi: 'Juara 2 Lomba Karate', tingkat: 'Provinsi', juara: '🥈 Juara 2' },
+    { tahun: '2024', prestasi: 'Juara 2 Lomba Panahan', tingkat: 'Kota', juara: '🥈 Juara 2' },
+    { tahun: '2024', prestasi: 'Juara 1 Lomba Panahan', tingkat: 'Kota', juara: '🥇 Juara 1' },
+    { tahun: '2024', prestasi: 'Juara 2 Lomba Panahan', tingkat: 'Kota', juara: '🥈 Juara 2' },
+    { tahun: '2024', prestasi: 'Juara 1 Lomba Pencak Silat', tingkat: 'Nasional', juara: '🥇 Juara 1' },
+    { tahun: '2024', prestasi: 'Juara 3 Lomba Karate', tingkat: 'Kota', juara: '🥉 Juara 3' },
+    { tahun: '2024', prestasi: 'Juara 3 Lomba Gambar Bercerita', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2025', prestasi: 'Juara 3 Lomba Six Fio', tingkat: 'Kota', juara: '🥉 Juara 3' },
+    { tahun: '2025', prestasi: 'Juara 3 Lomba Jumpa Siswa Darul Hikmah', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2025', prestasi: 'Juara 3 Lomba Five Fio Antar SD', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2025', prestasi: 'Juara 1 Lomba Six Feo Antar SD', tingkat: 'Kota', juara: '🥇 Juara 1' },
+    { tahun: '2025', prestasi: 'Juara 3 Lomba Pantomim FLS3N', tingkat: 'Kecamatan', juara: '🥉 Juara 3' },
+    { tahun: '2025', prestasi: 'Juara 1 Lomba Silat', tingkat: 'Kota', juara: '🥇 Juara 1' },
+    { tahun: '2025', prestasi: 'Juara 2 Lomba Silat', tingkat: 'Kota', juara: '🥈 Juara 2' }
   ]
 };
 
