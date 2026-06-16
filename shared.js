@@ -3,7 +3,7 @@
 // Detect current page
 const PAGE_MAP = {
   'index.html': 'home',
-  'struktur.html': 'struktur',
+  'struktur.html': 'eskul',
   'guru.html': 'guru',
   'akademik.html': 'akademik',
   'prestasi.html': 'prestasi',
@@ -18,7 +18,7 @@ const currentPage = PAGE_MAP[currentFile] || 'home';
 function injectNavbar() {
   const navLinks = [
     { key: 'home',     href: 'index.html',    label: 'Beranda' },
-    { key: 'struktur', href: 'struktur.html',  label: 'Struktur' },
+    { key: 'eskul', href: 'struktur.html',  label: 'Ekstrakurikuler' },
     { key: 'guru',     href: 'guru.html',      label: 'Guru & Staff' },
     { key: 'akademik', href: 'akademik.html',  label: 'Akademik' },
     { key: 'prestasi', href: 'prestasi.html',  label: 'Prestasi' },
@@ -106,7 +106,7 @@ function injectFooter() {
           <p class="font-semibold mb-3 text-blue-100">Tautan Cepat</p>
           <div class="grid grid-cols-2 gap-1 text-sm text-blue-200">
             <a href="index.html" class="hover:text-white transition">Beranda</a>
-            <a href="struktur.html" class="hover:text-white transition">Struktur Org.</a>
+            <a href="struktur.html" class="hover:text-white transition">Ekstrakurikuler</a>
             <a href="guru.html" class="hover:text-white transition">Guru & Staff</a>
             <a href="akademik.html" class="hover:text-white transition">Akademik</a>
             <a href="prestasi.html" class="hover:text-white transition">Prestasi</a>
