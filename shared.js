@@ -106,7 +106,7 @@ function injectFooter() {
           <p class="font-semibold mb-3 text-blue-100">Tautan Cepat</p>
           <div class="grid grid-cols-2 gap-1 text-sm text-blue-200">
             <a href="index.html" class="hover:text-white transition">Beranda</a>
-            <a href="struktur.html" class="hover:text-white transition">Ekstrakurikuler</a>
+            <a href="struktur.html" class="hover:text-white transition">Ekskul</a>
             <a href="guru.html" class="hover:text-white transition">Guru & Staff</a>
             <a href="akademik.html" class="hover:text-white transition">Akademik</a>
             <a href="prestasi.html" class="hover:text-white transition">Prestasi</a>
